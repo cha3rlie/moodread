@@ -257,6 +257,15 @@ body.page-index .card h3, body.page-index .card p{overflow-wrap:anywhere}
   body.page-index .card{padding:22px}
 }
 
+/* footer on phones: columns may shrink, and the newsletter gets its own full-width row */
+body.page-index .f-top>*{min-width:0}
+body.page-index footer li a{overflow-wrap:anywhere}
+@media(max-width:700px){
+  body.page-index .f-top{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
+  body.page-index .f-top>div:last-child{grid-column:1/-1}
+  body.page-index footer{padding-top:48px}
+}
+
 /* ============ log page ============ */
 body.page-log{font-family:'Inter',sans-serif;background:var(--cream);color:var(--ink);line-height:1.5;min-height:100vh}
 body.page-log a{text-decoration:none;color:inherit}
