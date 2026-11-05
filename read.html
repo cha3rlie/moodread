@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading – Moodread</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</head>
+<body class="page-read" data-page="read">
+
+<div class="bar">
+  <div class="in">
+    <a href="index.html" class="back">&larr; Back</a>
+    <div class="meta"><b id="title">Loading…</b><span id="author"></span></div>
+    <button class="aa" id="aa" type="button" aria-label="Reading settings" aria-expanded="false">Aa</button>
+  </div>
+  <div class="prog"><i id="bar"></i></div>
+
+  <div class="panel" id="panel" hidden>
+    <h4>Theme</h4>
+    <div class="themes" id="themes">
+      <button data-v="light" style="background:#FAF3EA" aria-label="Light"></button>
+      <button data-v="sepia" style="background:#F4ECD8" aria-label="Sepia"></button>
+      <button data-v="forest" style="background:#E8EFE6" aria-label="Forest"></button>
+      <button data-v="dark" style="background:#1C181B" aria-label="Dark"></button>
+    </div>
+    <h4>Font</h4>
+    <div class="opts" id="fonts">
+      <button data-v="'Lora',Georgia,serif" style="font-family:'Lora',serif">Lora</button>
+      <button data-v="'Fraunces',Georgia,serif" style="font-family:'Fraunces',serif">Fraunces</button>
+      <button data-v="'Inter',sans-serif" style="font-family:'Inter',sans-serif">Inter</button>
+      <button data-v="'Atkinson Hyperlegible',sans-serif" style="font-family:'Atkinson Hyperlegible',sans-serif">Easy read</button>
+    </div>
+    <h4>Text size <span id="fs-v"></span></h4>
+    <input type="range" id="fs" min="14" max="32" step="1">
+    <h4>Line spacing <span id="lh-v"></span></h4>
+    <input type="range" id="lh" min="14" max="24" step="1">
+    <h4>Page width</h4>
+    <div class="opts" id="widths">
+      <button data-v="560">Narrow</button><button data-v="680">Medium</button><button data-v="820">Wide</button>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+  <div class="state" id="state"><div class="spin"></div>Finding your book…</div>
+  <article id="page" hidden></article>
+</main>
+
+<div class="nav" id="nav" hidden>
+  <div class="in">
+    <button id="prev">&larr; Previous</button>
+    <span class="count" id="count"></span>
+    <button id="next">Next &rarr;</button>
+  </div>
+  <p class="credit">Text from Project Gutenberg</p>
+</div>
+
+</body>
+</html>

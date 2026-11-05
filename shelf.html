@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Shelf – Moodread</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</head>
+<body class="page-shelf" data-page="shelf">
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo">
+      <svg class="logo-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/><circle cx="18" cy="5" r="1.2"/></svg>
+      Moodread
+    </a>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="shelf.html" class="cur">My Shelf</a>
+    </nav>
+    <div class="nav-right">
+      <span class="who-name" id="who"></span>
+      <button class="btn btn-out" id="logout" type="button">Log out</button>
+      <div id="theme-slot"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow">Your library</p>
+    <h1 class="sec-title">My Shelf</h1>
+    <p class="sec-sub">Everything you've saved, in one place. It follows you to any device you log in on.</p>
+
+    <div class="tabs" id="tabs">
+      <button class="tab" data-s="reading" type="button">Reading <b>0</b></button>
+      <button class="tab" data-s="want" type="button">Want to read <b>0</b></button>
+      <button class="tab" data-s="finished" type="button">Finished <b>0</b></button>
+    </div>
+
+    <div class="grid5" id="grid"><div class="state">Loading your shelf…</div></div>
+  </div>
+</main>
+
+<footer>© 2026 Moodread</footer>
+
+</body>
+</html>
